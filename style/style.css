@@ -29,3 +29,56 @@ canvas {
     text-align: left;
     display: inline-block;
 }
+
+#C{
+    height: 5rem;
+    width: 5rem;
+    background: #00FFFF;
+    color: black;
+}
+#M{
+    height: 5rem;
+    width: 5rem;
+    background: #FF00FF;
+    color: black;
+}
+#Y{
+    height: 5rem;
+    width: 5rem;
+    background: #FFFF00;
+    color: black;
+}
+#K{
+    height: 5rem;
+    width: 5rem;
+    background: black;
+    color: white;
+}
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .table th,
+    .table td {
+        font-size: 12px;
+    }
+
+    .table th {
+        padding: 8px;
+    }
+
+    .table td {
+        padding: 8px;
+    }
+}

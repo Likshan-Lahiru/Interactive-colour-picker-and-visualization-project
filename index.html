@@ -1,27 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Interactive Colour Picker and Visualization Project CMYK COST RGB Color ">
-    <meta name="author" content="Dhanushika">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Colour Picker and Visualization Project</title>
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="Interactive Colour Picker and Visualization Project CMYK COST RGB Color ">
+  <meta name="author" content="Dhanushika">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Colour Picker and Visualization Project</title>
+  <link rel="stylesheet" href="style/login.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <h1>CMYK Analysis for Full Image and Selected Area</h1>
-    <p>Upload an image, analyze the full image's CMYK colors, and select a region to analyze its CMYK colors.</p>
-    <input type="file" id="imageUploader" accept="image/*">
-    <canvas id="imageCanvas"></canvas>
-    <div id="cmykResults">
-        <h2>Full Image CMYK</h2>
-        <p id="fullCmykDetails">C: 0%, M: 0%, Y: 0%, K: 0%</p>
-        <h2>Selected Area CMYK</h2>
-        <p id="selectedCmykDetails">C: 0%, M: 0%, Y: 0%, K: 0%</p>
+<nav>
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="CMYK" id="logo" />
+  </div>
+  <div class="nav-buttons">
+    <button class="login-btn">Login</button>
+    <button class="signup-btn">Signup</button>
+  </div>
+</nav>
+
+<main>
+  <div class="content">
+    <h1 class="title">
+      Analyzing color<br />
+      related area and ink<br />
+      consumption in image
+    </h1>
+    <button class="get-started-btn">Get Started</button>
+  </div>
+
+  <div class="color-wheel">
+    <img src="assets/images/main-image.png" alt="CMYK"/>
+
+  </div>
+</main>
+
+<!-- Login Modal -->
+<div class="modal-overlay">
+  <div class="modal">
+    <div class="modal-logo">
+      <img src="assets/images/logo.png" alt="CMYK">
     </div>
+    <h2 class="modal-title">Welcome to CMYK</h2>
+    <p class="modal-subtitle">Sign up or login below to manage your service</p>
+
+    <div class="modal-tabs">
+      <div class="tab active">Login</div>
+      <div class="tab">Sign up</div>
+    </div>
+
+    <div class="login-modal">
+      <div class="login-options">
+        <div class="google-login">
+          <img src="assets/images/icons/google-icon.png" alt="Google">
+          <span>Login with Google</span>
+        </div>
+      </div>
+
+      <div class="divider">
+        <span>or with continue with email</span>
+      </div>
+
+      <div class="input-group">
+        <div class="input-field">
+          <img src="assets/images/icons/email-icon.png" alt="Email">
+          <input id="sign-In-email" type="email" placeholder="Enter your Email">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/password-icon.png" alt="Password">
+          <input id="sign-In-password" type="password" placeholder="Enter your Password">
+        </div>
+      </div>
+
+      <a href="#" class="forgot-password">Forget Password?</a>
+
+      <button id="sign-In" class="login-button">Login</button>
+    </div>
+
+    <div class="signup-modal">
+      <div class="input-group">
+        <div class="input-field">
+          <img src="assets/images/icons/username-icon.png" alt="Username">
+          <input id="sign-up-user-name" type="text" placeholder="Enter your User Name">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/username-icon.png" alt="Username">
+          <input id="sign-up-first-name" type="text" placeholder="Enter your first Name">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/username-icon.png" alt="Username">
+          <input id="sign-up-last-name" type="text" placeholder="Enter your last Name">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/username-icon.png" alt="Username">
+          <input id="sign-up-company-name" type="text" placeholder="Enter your company Name">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/telephone-icon.png" alt=Telephone">
+          <input id="sign-up-contact" type="tel" placeholder="Enter your Telephone Number">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/email-icon.png" alt="Email">
+          <input id="sign-up-email" type="email" placeholder="Enter your Email">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/password-icon.png" alt="Password">
+          <input id="sign-up-password" type="password" placeholder="Enter your Password">
+        </div>
+        <div class="input-field">
+          <img src="assets/images/icons/password-icon.png" alt="Password">
+          <input id="sign-up-re-password" type="password" placeholder="Re-Enter your Password">
+        </div>
+      </div>
+
+      <button id="sign-up" class="login-button">Sign Up</button>
+    </div>
+
+    <p class="terms">
+      By signing up, you agree to our <a href="#">Terms of service</a> and <a href="#">privacy policy</a>
+    </p>
+  </div>
 </div>
-</div>
-<script src="script/script.js"></script>
+<script src="script/jquery.min.js"></script>
+<script src="controller/loginAPIController.js"></script>
+<script type="module" src="script/login.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
