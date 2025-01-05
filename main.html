@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Colour Picker and Visualization Project</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/icon">
     <link rel="stylesheet" href="style/navStyle.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
@@ -59,13 +60,11 @@
                     <div class="grey-bg container-fluid">
                         <section id="minimal-statistics">
                             <div class="row">
-                                <div class="col-12 mt-3 mb-1">
-                                    <h4 class="text-uppercase">Statistics</h4>
-                                </div>
+
                             </div>
                             <div class="row">
                                 <div class="col-xl-3 col-sm-6 col-12">
-                                    <div class="card">
+                                    <div id="1" class="card">
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="media d-flex">
@@ -82,7 +81,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-sm-6 col-12">
-                                    <div class="card">
+                                    <div id="2" class="card">
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="media d-flex">
@@ -99,7 +98,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-sm-6 col-12">
-                                    <div class="card">
+                                    <div id="3" class="card">
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="media d-flex">
@@ -116,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-sm-6 col-12">
-                                    <div class="card">
+                                    <div id="4" class="card">
                                         <div class="card-content">
                                             <div class="card-body">
                                                 <div class="media d-flex">
@@ -137,7 +136,7 @@
                         </section>
 
                         <section id="stats-subtitle">
-                            <div class="row">
+                            <div class="row test">
                                 <div class="col-12 mt-3 mb-1">
                                     <h4 class="text-uppercase">Color Statistics Table</h4>
                                     <p>Displaying detailed color data with image previews, color values, and associated costs.</p>
@@ -272,7 +271,7 @@
 
                 <div class="row gutters-sm">
                     <div class="col-md-4 mb-3">
-                        <div class="card">
+                        <div class="card1">
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
                                     <img id="user-image"  alt="Admin" class="rounded-circle" width="150">
@@ -284,7 +283,7 @@
 
                             </div>
                         </div>
-                        <div class="card mt-3">
+                        <div class="card1 mt-3">
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                     <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
@@ -312,7 +311,7 @@
                         </div>
                     </div>
                     <div class="col-md-8">
-                        <div class="card mb-3">
+                        <div class="card2 mb-3">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-sm-3">
@@ -444,6 +443,8 @@
     </div>
 </div>
 
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="script/jquery.min.js"></script>
 <script src="script/script.js"></script>
 <script src="script/navScript.js"></script>
